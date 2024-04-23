@@ -7,6 +7,12 @@ header {
   margin-bottom: 2rem;
 }
 
+.paragraph{
+  text-align: center;
+  color: #a39191;
+  margin: 0;
+}
+
 header img {
   object-fit: contain;
   margin-bottom: 2rem;
