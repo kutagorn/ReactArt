@@ -15,7 +15,7 @@ font-size: 0.75rem;
 font-weight: 700;
 letter-spacing: 0.1em;
 text-transform: uppercase;
-color: #6b7280;
+color: ${(props) => props.invalid ? '#f87171;' : '#6b7280' };
 `
 const Input = styled.input`
 width: 100%;
@@ -52,13 +52,7 @@ export default function AuthInputs() {
     <div id="auth-inputs">
       <ControlContainer>
         <p className="paragraph">
-          <Label
-            className={`label ${
-              emailNotValid
-                ? "invalid"
-                : "" /*This way we add the invalid className only if the email is not valid */
-            } `}
-          >
+          <Label invalid={emailNotValid} >
             Email
           </Label>
           <Input
